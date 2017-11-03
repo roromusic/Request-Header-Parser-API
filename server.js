@@ -4,6 +4,7 @@
 // init project
 var express = require('express');
 var app = express();
+var methods = require('./methods.js');
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -17,25 +18,9 @@ app.get("/", function (request, response) {
 });
 
 app.get("/whoami", function (request, response) {
-  function getClientIp(req) {
-  var ipAddress;
-  // The request may be forwarded from local web server.
-  var forwardedIpsStr = req.header('x-forwarded-for'); 
-  if (forwardedIpsStr) {
-    // 'x-forwarded-for' header may return multiple IP addresses in
-    // the format: "client IP, proxy 1 IP, proxy 2 IP" so take the
-    // the first one
-    var forwardedIps = forwardedIpsStr.split(',');
-    ipAddress = forwardedIps[0];
-  }
-  if (!ipAddress) {
-    // If request was not forwarded
-    ipAddress = req.connection.remoteAddress;
-  }
-  return ipAddress;
-};
   
-  response.end(getClientIp(request));
+  
+  response.end(methods.getClientIp(request) + " " + request.headers["accept-langugage"]);
 });
 
 app.get("/dreams", function (request, response) {
