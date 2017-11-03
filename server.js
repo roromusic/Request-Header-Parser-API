@@ -20,7 +20,7 @@ app.get("/", function (request, response) {
 app.get("/whoami", function (request, response) {
   
   
-  response.end(methods.getClientIp(request) + " " + request.acceptsLanguages()[0] + " " + request.headers['user-agent']);
+  response.end(methods.getClientIp(request) + " " + methods.getLanguage(request) + " " + request.headers['user-agent']);
 });
 
 app.get("/dreams", function (request, response) {

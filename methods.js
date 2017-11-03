@@ -17,6 +17,14 @@ var methods = {
       ipAddress = req.connection.remoteAddress;
     }
     return ipAddress;
+  },
+  
+  getLanguage(req) {
+    return req.acceptsLanguages()[0];
+  },
+  
+  getSoftware(req) {
+    
   }
 }
 
