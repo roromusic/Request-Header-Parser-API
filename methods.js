@@ -24,7 +24,8 @@ var methods = {
   },
   
   getSoftware(req) {
-    
+    var agent = useragent.parse(req.headers['user-agent']);
+    return agent.os.toString();
   }
 }
 
