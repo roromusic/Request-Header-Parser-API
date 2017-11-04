@@ -15,10 +15,9 @@ User stories:
 
 ### Example Usage:
 
-[https://timestamp-api-.glitch.me/December%2015,%202015](https://timestamp-api-.glitch.me//December%2015,%202015)
+[https://request-header-api.glitch.me/whoami](https://request-header-api.glitch.me/whoami)
 
-[https://timestamp-api-.glitch.me//1450137600](https://timestamp-api-.glitch.me//1450137600)
 
 ### Example output:
 
-	{ "unix": 1450137600, "natural": "December 15, 2015" }
+	{"ipaddress":"12.345.67.89","language":"en-US","software":"Windows 10 0.0.0"}
