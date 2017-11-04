@@ -1,27 +1,27 @@
-Welcome to the Glitch BETA
-=========================
+# FreeCodeCamp - Timestamp Microservice
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+The first API project for the Back End Development Certification on [FreeCodeCamp](https://freecodecamp.com). It uses Nodejs and Expressjs to return, as a JSON object, the Unix timestamp and the natural representation of a date string passed to it.
 
-**Glitch** is the friendly commmunity where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+## Demo
+[Click here](https://timestamp-api-.glitch.me/) to see the demo hosted on Glitch.
 
-Find out more [about Glitch](https://glitch.com/about).
+## Project Description
 
+Objective: Build a full stack JavaScript app that is functionally similar to [this](https://timestamp-ms.herokuapp.com/) and deploy it to Glitch.
 
-Your Project
-------------
+User stories:
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+1. I can pass a string as a parameter, and it will check to see whether that string contains
+either a unix timestamp or a natural language date (example: January 1, 2016)
+2. If it does, it returns both the Unix timestamp and the natural language form of that date.
+3. If it does not contain a date or Unix timestamp, it returns null for those properties.
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+### Example Usage:
 
+[https://timestamp-api-.glitch.me/December%2015,%202015](https://timestamp-api-.glitch.me//December%2015,%202015)
 
-Made by [Fog Creek](https://fogcreek.com/)
--------------------
+[https://timestamp-api-.glitch.me//1450137600](https://timestamp-api-.glitch.me//1450137600)
 
-\ ゜o゜)ノ
+### Example output:
+
+	{ "unix": 1450137600, "natural": "December 15, 2015" }
